@@ -1,5 +1,5 @@
 name: CCVPAP-SARS-COV-2
-description: A Consensus of In-silico Sequence-based Modeling Techniques for Compound-Viral Protein Activity Prediction for SARS-COV-2
+description: A Consensus of In-silico Sequence-based Modeling Techniques for Compound-Viral Protein Activity Prediction for SARS-COV-2. <a href="https://machinelearning-protein.qcri.org/start.html#!pages/ccvpap-sars-cov-2">Click here for details</a>.
 version: 1.0
 author: Raghvendra Mall, Abdurrahman Elbasir, Hossam Almeer, Ehsan Ullah
 submitButton: Predict!
