@@ -1,0 +1,24 @@
+name: SARS-COV2
+description: A Consensus of In-silico Sequence-based Modeling Techniques for Compound-Viral Protein Activity Prediction for SARS-COV-2
+version: 1.0
+author: Raghvendra Mall, Abdurrahman Elbasir, Hossam Almeer, Ehsan Ullah
+submitButton: Predict!
+workflow:
+  steps:
+    - name: Run Compound-Viral Protein Activity Prediction
+      cmd: ${app_local_folder}/run_prediction "${fasta}" "${smiles}" "${output_file}"  
+      bash: true
+  inputs:
+    - id: fasta
+      description: Viral Protein sequence in fasta
+      type: local_file
+    - id: smiles
+      description: Smiles for compounds
+      type: local_file
+  outputs:
+    - id: output_file
+      description: Output prediction file
+      type: local_folder
+      mergeOutput: false
+      download: true
+      zip: false
