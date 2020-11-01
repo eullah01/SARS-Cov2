@@ -1,4 +1,4 @@
-name: SARS-COV2
+name: CCVPAP-SARS-COV-2
 description: A Consensus of In-silico Sequence-based Modeling Techniques for Compound-Viral Protein Activity Prediction for SARS-COV-2
 version: 1.0
 author: Raghvendra Mall, Abdurrahman Elbasir, Hossam Almeer, Ehsan Ullah
@@ -6,14 +6,14 @@ submitButton: Predict!
 workflow:
   steps:
     - name: Run Compound-Viral Protein Activity Prediction
-      cmd: ${app_local_folder}/run_prediction "${fasta}" "${smiles}" "${output_file}"  
+      cmd: ${app_local_folder}/run_prediction "${sequence}" "${smiles}" "${output_file}"  
       bash: true
   inputs:
-    - id: fasta
-      description: Viral Protein sequence in fasta
+    - id: sequence
+      description: Viral Proteins csv file with column header UniProtId,Sequence
       type: local_file
     - id: smiles
-      description: Smiles for compounds
+      description: Compound csv file with column header Inchikey,Canonical_SMILES
       type: local_file
   outputs:
     - id: output_file
